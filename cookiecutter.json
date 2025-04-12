@@ -1,0 +1,5 @@
+{
+    "namespace_folder": "Admin",
+    "controller_name": "User",
+    "target_path": "app/Http/Controllers/{{cookiecutter.namespace_folder}}",
+}
