@@ -1,5 +1,4 @@
 {
-  "project_slug": "generated",
-  "namespace_folder": "Admin",
-  "controller_name": "Example"
+    "namespace_folder": "Admin",
+    "controller_name": "Example"
 }
