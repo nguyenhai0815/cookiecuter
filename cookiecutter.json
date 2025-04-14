@@ -1,6 +1,6 @@
 {
-  "project_slug": "app",
-  "component_types": ["Controller", "Service"],
+  "project_slug": ".",
+  "component_types": "Controller,Service",
   "namespace_folder": "Admin",
   "controller_name": "Example"
 }
