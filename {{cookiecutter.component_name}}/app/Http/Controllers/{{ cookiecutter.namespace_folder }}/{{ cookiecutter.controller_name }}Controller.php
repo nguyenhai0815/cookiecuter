@@ -5,7 +5,7 @@ namespace App\Http\Controllers\{{ cookiecutter.namespace_folder }};
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class {{ controller_name }}Controller extends Controller
+class {{ cookiecutter.controller_name }}Controller extends Controller
 {
     public function index()
     {

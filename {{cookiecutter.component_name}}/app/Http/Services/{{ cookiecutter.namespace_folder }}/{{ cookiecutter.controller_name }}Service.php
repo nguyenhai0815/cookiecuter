@@ -2,7 +2,7 @@
 
 namespace App\Http\Services\{{ cookiecutter.namespace_folder }};
 
-class {{ controller_name }}Service
+class {{ cookiecutter.controller_name }}Service
 {
     public function getData()
     {
