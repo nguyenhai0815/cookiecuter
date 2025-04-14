@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\{{ namespace_folder }};
+namespace App\Http\Controllers\{{ cookiecutter.namespace_folder }};
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services\{{ namespace_folder }};
+namespace App\Http\Services\{{ cookiecutter.namespace_folder }};
 
 class {{ controller_name }}Service
 {
