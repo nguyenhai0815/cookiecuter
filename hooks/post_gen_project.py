@@ -24,8 +24,9 @@ namespace = "{{ cookiecutter.namespace_folder }}".strip()
 
 def run_artisan(command):
     print(f"👉 Running: php artisan {command}")
+    laravel_root = os.path.abspath(os.path.join(base_path, "..", ".."))
+    print(f"📁 Laravel root path: {laravel_root}")
     try:
-        laravel_root = os.getcwd()  # hoặc chỉ rõ path cụ thể nếu cần
         subprocess.run(f"php artisan {command}", shell=True, check=True, cwd=laravel_root)
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed: {e}")
