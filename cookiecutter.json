@@ -1,9 +1,4 @@
 {
-  "component_types": [
-    "Controller",
-    "Service"
-  ],
   "namespace_folder": "Admin",
-  "controller_name": "User",
-  "service_name": "User"
+  "controller_name": "Example"
 }
