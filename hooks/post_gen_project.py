@@ -25,8 +25,8 @@ namespace = "{{ cookiecutter.namespace_folder }}".strip()
 def run_artisan(command):
     print(f"👉 Running: php artisan {command}")
     try:
-        # Chuyển đến thư mục gốc của Laravel trước khi chạy lệnh artisan
-        subprocess.run(f"php artisan {command}", shell=True, check=True)
+        laravel_root = os.getcwd()  # hoặc chỉ rõ path cụ thể nếu cần
+        subprocess.run(f"php artisan {command}", shell=True, check=True, cwd=laravel_root)
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed: {e}")
 
