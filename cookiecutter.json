@@ -1,5 +1,4 @@
 {
-  "_template": "generated",  // trick, giá trị gì cũng được
   "component_types": [
     "Controller",
     "Service"
