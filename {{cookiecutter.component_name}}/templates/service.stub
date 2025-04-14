@@ -6,6 +6,6 @@ class {{ controller_name }}Service
 {
     public function getData()
     {
-        // ...
+        return ['service' => '{{ controller_name }}Service working!'];
     }
 }
