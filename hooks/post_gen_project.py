@@ -2,24 +2,30 @@ import os
 import shutil
 import subprocess
 
+# Lấy các component types từ Cookiecutter
 types = "{{ cookiecutter.component_types }}".replace(" ", "").split(",")
 
-base_path = os.path.join(os.getcwd(), "{{ cookiecutter.project_slug }}", "Http")
+# Đặt đường dẫn thư mục gốc của dự án Laravel
+base_path = os.path.join(os.getcwd(), "app", "Http")
 
+# Xoá thư mục Controllers nếu không chọn Controller
 if "Controller" not in types:
-    controller_path = os.path.join(base_path, "Controllers")
+    controller_path = os.path.join(base_path, "Controllers", "{{ cookiecutter.namespace_folder }}")
     shutil.rmtree(controller_path, ignore_errors=True)
 
+# Xoá thư mục Services nếu không chọn Service
 if "Service" not in types:
-    service_path = os.path.join(base_path, "Services")
+    service_path = os.path.join(base_path, "Services", "{{ cookiecutter.namespace_folder }}")
     shutil.rmtree(service_path, ignore_errors=True)
 
+# Lấy tên model và namespace từ cookiecutter
 model_name = "{{ cookiecutter.model_name }}".strip()
 namespace = "{{ cookiecutter.namespace_folder }}".strip()
 
 def run_artisan(command):
     print(f"👉 Running: php artisan {command}")
     try:
+        # Chuyển đến thư mục gốc của Laravel trước khi chạy lệnh artisan
         subprocess.run(f"php artisan {command}", shell=True, check=True)
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed: {e}")
