@@ -1,4 +1,6 @@
 {
-    "namespace_folder": "Admin",
-    "controller_name": "Example"
+  "project_slug": "app",
+  "namespace_folder": "Admin",
+  "controller_name": "Example",
+  "service_name": "Example"
 }
