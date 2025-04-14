@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Http\Services\{{ namespace_folder }};
+
+class {{ controller_name }}Service
+{
+    public function getData()
+    {
+        // ...
+    }
+}
