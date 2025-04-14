@@ -24,12 +24,11 @@ def run_artisan(command):
     except subprocess.CalledProcessError as e:
         print(f"❌ Failed: {e}")
 
-# Tạo model + migration
-if model_name:
-    run_artisan(f"make:model {model_name} --migration")
+# Lệnh tạo Model và Migration
+run_artisan(f"make:model {model_name} --migration")
 
-    # Tạo FormRequest
-    run_artisan(f"make:request Http/Requests/{namespace}/{model_name}Request")
+# Lệnh tạo Request trong thư mục Admin
+run_artisan(f"make:request {namespace}/{model_name}Request")
 
-    # Tạo Resource
-    run_artisan(f"make:resource Http/Resources/{namespace}/{model_name}Resource")
+# Lệnh tạo Resource trong thư mục Admin
+run_artisan(f"make:resource {namespace}/{model_name}Resource")
