@@ -1,6 +1,10 @@
 {
-    "component_types": ["Controller", "Service"],
-    "namespace_folder": "Admin",
-    "controller_name": "Example",
-    "service_name": "Example"
+  "_template": "generated",  // trick, giá trị gì cũng được
+  "component_types": [
+    "Controller",
+    "Service"
+  ],
+  "namespace_folder": "Admin",
+  "controller_name": "User",
+  "service_name": "User"
 }
