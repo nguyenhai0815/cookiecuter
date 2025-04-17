@@ -1,7 +1,4 @@
 {
-  "project_slug": "app",
-  "component_types": "Controller,Service",
-  "namespace_folder": "Admin",
-  "controller_name": "Example",
-  "model_name": "Example"
+    "parent_module": "admin",
+    "module_name": "example"
 }
